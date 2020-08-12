@@ -1,0 +1,11 @@
+# Local resources (pdfs, images, screenshots)
+private
+
+# MacOS CodeKit app config
+.config.codekit3
+
+# JetBrains IDE config
+.idea
+
+# Personal stuff
+/private/*

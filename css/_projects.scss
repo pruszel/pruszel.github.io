@@ -1,0 +1,184 @@
+@charset 'UTF-8';
+
+/*
+ * _projects.scss
+ *
+ * Styles for projects displayed with title, link, 
+ * description, and interactive mobile/desktop screenshots
+ */
+
+/*
+ * Color adjustments for individual projects
+ */
+#cjc.project .project__link,
+#bei.project .project__link,
+#lunchpicker.project .project__link {
+	color: $color-offwhite;
+}
+#cjc.project .project__title {
+	background: #3D9970;
+}
+#lunchpicker.project .project__title {
+	background: #007bff;
+}
+#bei.project .project__title {
+	background: #5391aa;
+}
+#slocomcare.project .project__title {
+	background: #7FDBFF;
+}
+
+
+.project {
+	width: auto;
+	box-sizing: border-box;
+	color: $color-darkgrey;
+	background: $color-offwhite;
+
+	.project__title {
+		text-align: center;
+		font-family: $font-fancy;
+		margin: 0;
+		padding: 15px 0 12px;
+		font-size: 200%;
+		box-shadow: 0px -3px 8px -5px $color-darkgrey;
+		border-radius: 20px 20px 0 0;
+	}
+	.project__title:hover .project__link {
+		text-decoration: underline;
+	}
+	.project__title .icon {
+		width: 22px;
+	}
+	.project__title .project__link {
+		color: #000;
+		padding: 10px 5px;
+		margin-left: -5px;
+		text-decoration: none;
+	}
+	.project__desc {
+		width: 90%;
+		margin: 20px auto;
+		max-width: 400px;
+		line-height: 1.25;
+		cursor: default;
+		font-family: $font-body;
+	}
+	.project__desc > a {
+		color: #000;
+	}
+}
+// end of .project
+
+@media (min-width: 600px)
+{
+	.project {
+		padding: 40px 0 30px 60px;
+		box-shadow: 0px 0px 10px -5px $color-darkgrey;
+
+		.project-list {
+			padding: 0 20px;
+			background-color: $color-offwhite;
+			box-shadow: 0 -7px 10px #36363666;
+		}
+
+		.project__title {
+			text-align: left;
+			border-radius: 0;
+			margin: 0 0 20px -60px;
+			padding: 15px 0 10px 50px;
+			box-shadow: 0px 2px 5px 0px $color-darkgrey;
+		}
+
+		.project__desc {
+			margin: 10px 0 20px;
+		}
+	}
+}
+// end of @media for .project
+
+
+
+.project .screenshots {
+	text-align: center;
+
+	.screenshot {
+		height: 100%;
+		width: auto;
+		margin: 0 auto;
+		min-height: 40px;
+		max-height: 300px;
+		opacity: 1;
+		display: block;
+	}
+	.screenshot:not(.active) {
+		opacity: 0;
+		display: none;
+	}
+	.screenshot.mobile {
+		max-width: 200px;
+	}
+	.screenshot.fadein {
+		animation-duration: 300ms;
+		animation-timing-function: ease-in;
+	}
+
+	// hide this on mobile
+	.device-selector {
+		display: none;
+		text-align: center;
+	}
+}
+// end of .project .screenshots
+
+@media (min-width: 600px)
+{
+	.project .screenshots {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		overflow: hidden;
+
+		// show on desktop
+		.device-selector {
+			display: block;
+		}
+		// mobile or desktop icon and text
+		.device-item {
+			margin: 40px 0;
+			line-height: 2;
+			font-size: 115%;
+			cursor: pointer;
+			font-family: $font-body;
+			transition: opacity 400ms;
+		}
+		// mobile or desktop icon
+		.device-item .device-icon {
+			margin: 0 auto;
+		}
+		.device-item.mobile .device-icon {
+			width: 20px;
+		}
+		.device-item.desktop .device-icon {
+			width: 30px;
+		}
+		.device-item.active {
+			opacity: 1;
+		}
+		.device-item:not(.active) {
+			opacity: .5;
+		}
+		.device-item:hover {
+			text-decoration: underline;
+			color: $color-darkgrey;
+			opacity: 1;
+		}
+
+		.screenshot-container {
+			padding-left: 0;
+			text-align: center;
+			overflow: hidden;
+			width: 100%;
+		}
+	}
+}
+// end of @media for .project .screenshots

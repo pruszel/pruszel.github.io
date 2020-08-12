@@ -1,0 +1,60 @@
+@charset 'UTF-8';
+
+@import 'variables';
+
+/*
+ * _theme.scss
+ *
+ * Styles for common elements across every page.
+ */
+
+html {
+	background: $color-lightgrey;
+	line-height: 1.5;
+	height: 100%;
+	scroll-behavior: smooth;
+}
+body {
+	margin: 0px auto;
+	height: 100%;
+}
+
+
+header {
+	text-align: center;
+	padding: 10px 0 0;
+}
+header a {
+	color: $color-darkgrey;
+	text-decoration: none;
+}
+header h1 a:hover {
+	border-bottom: 2px solid $color-darkgrey;
+}
+
+
+/*
+ * Font stuff
+ */
+html {
+	font-family: $font-body;
+}
+.page-title {
+	text-align: center;
+	width: 90%;
+	margin: 10px auto 15px;
+	color: #333;
+	font-family: $font-heading;
+	text-shadow: 0 3px 1px $color-grey;
+}
+
+/*
+ * Icons
+ */
+.social-icon {
+	fill: $color-darkgrey;
+	transition: fill 400ms;
+}
+.social-icon:hover {
+	fill: $color-black;
+}
