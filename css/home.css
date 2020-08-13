@@ -5,7 +5,8 @@
  * Home page-specific styles
  */
 .home.page .page-title {
-  margin-top: 30px;
+  margin: 0 auto 15px;
+  padding-top: 30px;
 }
 .home.page .page-title::before {
   content: "👋";

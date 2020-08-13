@@ -181,6 +181,9 @@
   top: 0;
   left: 0;
 }
+.work.page header .page-title {
+  margin: 10px auto 15px;
+}
 .work.page header .social-icon {
   max-width: 40px;
   margin: 0 10px 15px 10px;
