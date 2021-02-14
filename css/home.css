@@ -4,12 +4,32 @@
  *
  * Home page-specific styles
  */
+.home.page {
+  padding: 30px 0;
+}
+
+.home-layout {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .home.page .page-title {
   margin: 0 auto 15px;
-  padding-top: 30px;
 }
+
 .home.page .page-title::before {
-  content: "👋";
+  content: '👋';
   margin-right: 10px;
 }
 
@@ -26,20 +46,11 @@
   height: auto;
   border-radius: 50%;
   border: 2px solid #888;
-  box-shadow: 0px 4px 8px -2px #333;
-}
-
-.profile-pic:hover {
-  cursor: pointer;
-}
-
-.profile-pic {
-  animation-duration: 0.8s;
+  -webkit-box-shadow: 0px 4px 8px -2px #333;
+          box-shadow: 0px 4px 8px -2px #333;
 }
 
 .about-text {
-  width: 90%;
-  max-width: 350px;
   font-size: 110%;
   margin: 20px auto;
   font-family: Inter, Arial, sans-serif;
@@ -56,17 +67,21 @@
   font-family: "Roboto Slab", "Lucida Bright", serif;
   text-align: center;
   font-size: 200%;
-  transition: color, background 300ms;
+  -webkit-transition: color, background-color 300ms;
+  transition: color, background-color 300ms;
   text-decoration: none;
   border-radius: 10px;
   color: #333;
-  box-shadow: 0px 0px 10px -3px #333;
-  background: #ffefba;
+  -webkit-box-shadow: 0px 0px 10px -3px #333;
+          box-shadow: 0px 0px 10px -3px #333;
+  background-color: #ffefba;
+  background-color: #bcffba;
 }
 
 .workbtn:hover {
   color: #000;
-  background: #ecddaa;
+  background-color: #ecddaa;
+  background-color: #bcffba;
   margin-bottom: 28px;
   border-bottom-width: 2px;
   border-bottom-style: solid;
@@ -76,11 +91,14 @@
   text-align: center;
   margin-top: 10px;
 }
+
 .home.page footer .social-icon-link {
   margin: 0 10px;
   padding: 5px;
   text-decoration: none;
 }
+
 .home.page footer .social-icon {
   width: 50px;
 }
+/*# sourceMappingURL=home.css.map */

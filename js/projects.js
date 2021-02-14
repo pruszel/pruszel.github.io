@@ -85,4 +85,3 @@ const $btns = document.querySelectorAll(".device-item");
 for (let i = 0; i < $btns.length; i++) {
 	$btns[i].addEventListener("click", toggleScreenshot);
 }
-
