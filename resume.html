@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<meta charset='utf-8'>
+		<link rel="icon" href="data:;base64,iVBORwOKGO=" />
+		<style>
+			* { box-sizing: border-box; }
+
+			/* Fonts */
+			:root {
+				--base-font-size: 10pt;
+				--body-font: Georgia, 'Times New Roman', Times, serif;
+				--title-font: 'Avenir Next', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			}
+			html {
+				font-size: var(--base-font-size);
+				font-family: var(--body-font);
+				line-height: 1.5;
+			}
+			h1, h2, h3, h4 {
+				font-family: var(--title-font);
+			}
+
+
+			/* Page setup */
+			body {
+				margin: 0;
+			}
+			.page {
+				margin: 1in;
+				width: 6.5in;
+			}
+
+
+			/* Page layout */
+			.page {
+				display: grid;
+				grid-template-columns: auto auto;
+				align-items: end;
+				grid-template-areas: 
+					'header aside'
+					'main main';
+				page-break-after: always;
+			}
+			header { grid-area: header; }
+			main { grid-area: main; }
+			aside { grid-area: aside; }
+
+
+			/* Header */
+			.name {
+				margin: 0;
+				font-size: 2.25rem;
+			}
+			.page2 .name {
+				margin-bottom: 1rem;
+			}
+			.summary {
+				margin: 1rem 1rem 0 0;
+			}
+			aside {
+				text-align: right;
+			}
+			.contact p {
+				margin: 0;
+			}
+			.page-num {
+				font-family: var(--title-font);
+				font-size: 1.15rem;
+				margin-bottom: 1.5rem;
+				margin-top: 0;
+			}
+
+
+			/* All Sections */
+			.section-title {
+				margin: 2rem 0 1rem;
+			}
+			section:not(.experience, .education) .section-content {
+				margin-left: 2rem ;
+			}
+			.title2 {
+				margin: 0;
+			}
+			.title3 {
+				font-size: 1rem;
+				font-family: var(--body-font);
+				font-weight: normal;
+				margin: 0;
+			}
+			.entry {
+				display: grid;
+				grid-template-columns: 8ch auto;
+				grid-template-areas: 'date content';
+				grid-column-gap: 2rem;
+				margin: 0 0 2rem 0;
+			}
+			.entry .date {
+				grid-area: date;
+				font-size: 0.85rem;
+				font-family: var(--title-font);
+				font-weight: bold;
+				margin: 0;
+			}
+			.entry .content {
+				grid-area: content;
+			}
+
+
+			/* Experience section */
+			.experience .responsibilities {
+				margin: 0;
+				padding: 0 0 0 2rem;
+			}
+
+
+			/* Skills section */
+			.tech-skills .section-title {
+				margin-top: 0;
+			}
+			.tech-skills .section-content {
+				display: grid;
+				grid-template-columns: 10ch auto;
+				grid-row-gap: 0.5rem;
+				grid-column-gap: 2rem;
+				align-items: start;
+			}
+			.skill-category {
+				font-weight: bold;
+				font-family: var(--title-font);
+			}
+			.skill-category, .skill-items {
+				margin: 0;
+			}
+			.soft-skills-list {
+				padding-left: 0;
+				margin-top: 0; margin-bottom: 0;
+			}
+			.soft-skills-list li {
+				margin-bottom: 0.25rem;
+			}
+
+
+			@media print {
+				a {
+					color: black;
+					text-decoration: none;
+				}
+				.page {
+					margin: 0;
+				}
+				@page {
+					size: auto;
+					margin: 0.75in 1in;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class='page page1'>
+			<header>
+				<h1 class='name'>Peter Lopez Ruszel</h1>
+				<p class='summary'>
+					Web Developer with 10 years of combined front and back-end web development experience in e-commerce and marketing teams at small to medium-sized businesses. 
+					Passionate about education and currently teaching coding to students at theCoderSchool.
+				</p>
+			</header>
+			<aside>
+				<div class='contact'>
+					<p class='contact-email'><a href='mailto:peter@peterlopez.me'>peter@peterlopez.me</a></p>
+					<p class='contact-phone'>(925) 459-4527</p>
+					<p class='contact-location'>Walnut Creek, CA</p>
+					<p class='contact-website'><a href='https://peterlopez.me'>https://peterlopez.me</a></p>
+					<p class='contact-linkedin'><a href='https://linkedin.com/in/peterrlopez'>https://linkedin.com/in/peterrlopez</a></p>
+				</div>
+			</aside>
+			<main>
+				<section class='experience'>
+					<h2 class='section-title'>Work Experience</h2>
+					<div class='section-content'>
+						<div class='entry'>
+							<p class='date'>Oct 2019 - Present</p>
+							<div class='content'>
+								<h3 class='title2'>Lead Coding Instructor - theCoderSchool Walnut Creek</h3>
+								<ul class='responsibilities'>
+									<li>Developed unique curriculum for each individual student across a wide array of coding languages, frameworks, and technologies.</li>
+									<li>Maintained fun and engaging learning environment for students grades K-12.</li>
+									<li>Created training resources for instructors on teaching styles and techniques.</li>
+								</ul>
+							</div>
+						</div>
+						<div class='entry'>
+							<p class='date'>2010 - Present</p>
+							<div class='content'>
+								<h3 class='title2'>Full Stack Web Developer - Freelance</h3>
+								<ul class='responsibilities'>
+									<li>Delivered custom website solutions for organizations and small businesses wanting to gain or grow their online presence.</li>
+									<li>Launched more than a dozen successful websites into production.</li>
+									<li>Handled all aspects of the project, from initial requirements gathering to ongoing maintenance.</li>
+								</ul>
+							</div>
+						</div>
+						<div class='entry'>
+							<p class='date'>Jun 2017 - Dec 2018</p>
+							<div class='content'>
+								<h3 class='title2'>Software Engineer - Little Passports</h3>
+								<ul class='responsibilities'>
+									<li>Managed large-scale customer subscription and product data.</li>
+									<li>Provided reports and analytics for finance, product, customer service, and marketing teams.</li>
+									<li>Increased website traffic and conversion rate from building new Wordpress theme.</li>
+								</ul>
+							</div>
+						</div>
+						<div class='entry'>
+							<p class='date'>Oct 2016 - May 2017</p>
+							<div class='content'>
+								<h3 class='title2'>Front End Engineer - Cost Plus World Market</h3>
+								<ul class='responsibilities'>
+									<li>Moved website onto new CMS platform incorporating best practices for SEO and mobile-first responsive design.</li>
+									<li>Built interactive and engaging product and marketing pages.</li>
+								</ul>
+							</div>
+						</div>
+						<div class='entry'>
+							<p class='date'>Aug 2013 - Mar 2016</p>
+							<div class='content'>
+								<h3 class='title2'>Drupal & Wordpress Developer - Clorox, Hathway, AccuAir</h3>
+								<ul class='responsibilities'>
+									<li>Built and maintained custom Drupal and Wordpress themes, modules, and plugins for clients' websites.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<div class='page page2'>
+			<header>
+				<h1 class='name'>Peter Lopez Ruszel</h1>
+			</header>
+			<aside>
+				<p class='page-num'>2</p>
+			</aside>
+			<main>
+				<section class='tech-skills'>
+					<h2 class='section-title'>Technical Skills</h2>
+					<div class='section-content'>
+						<p class='skill-category'>Languages:</p>
+						<p class='skill-items'>
+							Javascript ES6+, TypeScript, PHP, HTML, CSS, SCSS, <br>
+							Python, C++, Java</p>
+						<p class='skill-category'>Frameworks:</p>
+						<p class='skill-items'>
+							Node, Express, React, Rollup, Jekyll, jQuery, <br>
+							Ruby on Rails, CodeIgniter, Bootstrap, Foundation
+						</p>
+						<p class='skill-category'>Content Management:</p>
+						<p class='skill-items'>
+							Drupal, WordPress, Magento, <br>
+							Kibo Commerce, Perch</p>
+						<p class='skill-category'>Databases:</p>
+						<p class='skill-items'>MySQL, PostgreSQL, MongoDB, Redis</p>
+						<p class='skill-category'>Dev Ops:</p>
+						<p class='skill-items'>Docker, Nginx, Apache, Unix, Bash, GitHub</p>
+						<p class='skill-category'>IT:</p>
+						<p class='skill-items'>TCP/IP, DNS, VPN, VLAN, Subnets</p>
+					</div>
+				</section>
+				<section class='soft-skills'>
+					<h2 class='section-title'>Soft Skills</h2>
+					<div class='section-content'>
+						<ul class='soft-skills-list'>
+							<li>Clear and effective communication.</li>
+							<li>Translating business requirements into technical solutions.</li>
+							<li>Organizing and planning software projects.</li>
+							<li>Working in collaborative settings.</li>
+						</ul>
+					</div>
+				</section>
+				<section class='education'>
+					<h2 class='section-title'>Education</h2>
+					<div class='section-content'>
+						<div class='entry'>
+							<p class='date'>May 2021</p>
+							<div class='content'>
+								<h3 class='title2'>California State University, East Bay</h3>
+								<h3 class='title3'>Bachelor of Arts in Philosophy</h3>
+							</div>
+						</div>
+						<div class='entry'>
+							<p class='date'>2020</p>
+							<div class='content'>
+								<h3 class='title2'>Diablo Valley College</h3>
+								<h3 class='title3'>Associate of Arts in Philosophy</h3>
+								<h3 class='title3'>Associate of Science in Computer Science</h3>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class='other'>
+					<h2 class='section-title'>Other</h2>
+					<div class='section-content'>
+						<h3 class='title2'>CompTIA Network+ certification</h3>
+						<br>
+						<h3 class='title2'>Eagle Scout, Boy Scouts of America</h3>
+						<br>
+						<h3 class='title2'>Contra Costa Chess Club Member</h3>
+					</div>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>
