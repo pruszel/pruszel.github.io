@@ -4,11 +4,15 @@
 		<meta charset='utf-8'>
 		<meta name='viewport' content='width=device-width, initial-scale=1'>
 		<!-- SEO -->
-		<title>Peter Ruszel's Resume</title>
+		<title>Peter Ruszel Resume</title>
 		<!-- assets/resources -->
 		<link rel="icon" href="data:;base64,iVBORwOKGO=" />
 		<style>
 			* { box-sizing: border-box; }
+			.margin-0 { margin: 0; }
+			a:visited {
+				color: blue;
+			}
 
 			/* Fonts */
 			:root {
@@ -80,7 +84,7 @@
 			.section-title {
 				margin: 2rem 0 1rem;
 			}
-			section:not(.experience, .education) .section-content {
+			section:not(.experience) .section-content {
 				margin-left: 2rem ;
 			}
 			.title2 {
@@ -91,6 +95,10 @@
 				font-family: var(--body-font);
 				font-weight: normal;
 				margin: 0;
+			}
+			.body-copy2 {
+				color: #333;
+				font-size: 0.85rem;
 			}
 			.entry {
 				display: grid;
@@ -146,7 +154,7 @@
 
 
 			@media print {
-				a {
+				a, a:visited {
 					color: black;
 					text-decoration: none;
 				}
@@ -165,42 +173,42 @@
 			<header>
 				<h1 class='name'>Peter Lopez Ruszel</h1>
 				<p class='summary'>
-					Web Developer with 10 years of combined front and back-end web development experience in e-commerce and marketing teams at small to medium-sized businesses. 
-					Passionate about education and currently teaching coding to students at theCoderSchool.
+					Web Developer with 10+ years of full stack web development experience working on e-commerce and marketing teams at small to large-scale organizations. 
+					Passionate about building high-quality responsive and interactive web applications.
 				</p>
 			</header>
 			<aside>
 				<div class='contact'>
-					<p class='contact-email'><a href='mailto:peter@peterlopez.me'>peter@peterlopez.me</a></p>
+					<p class='contact-email'><a href='mailto:peterlruszel@gmail.com'>peterlruszel@gmail.com</a></p>
 					<p class='contact-phone'>(925) 459-4527</p>
-					<p class='contact-location'>Walnut Creek, CA</p>
-					<p class='contact-website'><a href='https://peterlopez.me'>https://peterlopez.me</a></p>
+					<p class='contact-location'>San Fransisco Bay Area</p>
+					<!-- <p class='contact-website'><a href='https://peterlopez.me'>https://peterlopez.me</a></p> -->
 					<p class='contact-linkedin'><a href='https://linkedin.com/in/peterrlopez'>https://linkedin.com/in/peterrlopez</a></p>
 				</div>
 			</aside>
 			<main>
 				<section class='experience'>
-					<h2 class='section-title'>Work Experience</h2>
+					<h2 class='section-title'>Experience</h2>
 					<div class='section-content'>
 						<div class='entry'>
-							<p class='date'>Oct 2019 - Present</p>
+							<p class='date'>Oct 2021 - Present</p>
 							<div class='content'>
-								<h3 class='title2'>Lead Coding Instructor - theCoderSchool Walnut Creek</h3>
+								<h3 class='title2'>Senior Web Developer - One Medical</h3>
 								<ul class='responsibilities'>
-									<li>Developed unique curriculum for each individual student across a wide array of coding languages, frameworks, and technologies.</li>
-									<li>Maintained fun and engaging learning environment for students grades K-12.</li>
-									<li>Created training resources for instructors on teaching styles and techniques.</li>
+									<li>Managed web development team, project planning, coordinating with stakeholders.</li>
+									<li>Built and optimized high-traffic web pages within CMS application based on Figma designs.</li>
+									<li>Built integrations between marketing technology plaltforms and clinical data platforms.</li>
 								</ul>
 							</div>
 						</div>
 						<div class='entry'>
-							<p class='date'>2010 - Present</p>
+							<p class='date'>Oct 2019 - Oct 2021</p>
 							<div class='content'>
-								<h3 class='title2'>Full Stack Web Developer - Freelance</h3>
+								<h3 class='title2'>Lead Instructor - The Coder School</h3>
 								<ul class='responsibilities'>
-									<li>Delivered custom website solutions for organizations and small businesses wanting to gain or grow their online presence.</li>
-									<li>Launched more than a dozen successful websites into production.</li>
-									<li>Handled all aspects of the project, from initial requirements gathering to ongoing maintenance.</li>
+									<li>Developed unique curriculum for individual students across a wide array of coding languages, frameworks, and technologies.</li>
+									<li>Maintained fun and engaging learning environment for students grades K-12.</li>
+									<li>Created training resources for instructors on teaching styles and techniques.</li>
 								</ul>
 							</div>
 						</div>
@@ -218,9 +226,9 @@
 						<div class='entry'>
 							<p class='date'>Oct 2016 - May 2017</p>
 							<div class='content'>
-								<h3 class='title2'>Front End Engineer - Cost Plus World Market</h3>
+								<h3 class='title2'>Front End Developer - Cost Plus World Market</h3>
 								<ul class='responsibilities'>
-									<li>Moved website onto new CMS platform incorporating best practices for SEO and mobile-first responsive design.</li>
+									<li>Moved website to new CMS platform incorporating best practices for SEO and mobile-first responsive design.</li>
 									<li>Built interactive and engaging product and marketing pages.</li>
 								</ul>
 							</div>
@@ -249,36 +257,22 @@
 				<section class='tech-skills'>
 					<h2 class='section-title'>Technical Skills</h2>
 					<div class='section-content'>
-						<p class='skill-category'>Languages:</p>
+						<p class='skill-category'>Front-End:</p>
 						<p class='skill-items'>
-							Javascript ES6+, TypeScript, PHP, HTML, CSS, SCSS, <br>
-							Python, C++, Java</p>
-						<p class='skill-category'>Frameworks:</p>
-						<p class='skill-items'>
-							Node, Express, React, Rollup, Jekyll, jQuery, <br>
-							Ruby on Rails, CodeIgniter, Bootstrap, Foundation
+							React, Webpack, Gulp, Javascript ES6+, TypeScript, <br>
+							Tailwind, SCSS, Bootstrap, Foundation
 						</p>
-						<p class='skill-category'>Content Management:</p>
+						<p class='skill-category'>Back-End:</p>
 						<p class='skill-items'>
-							Drupal, WordPress, Magento, <br>
-							Kibo Commerce, Perch</p>
+							Next.js, Express.js, Jekyll, Django<br>
+							Ruby on Rails, Drupal, WordPress, Magento
+						</p>
 						<p class='skill-category'>Databases:</p>
 						<p class='skill-items'>MySQL, PostgreSQL, MongoDB, Redis</p>
 						<p class='skill-category'>Dev Ops:</p>
 						<p class='skill-items'>Docker, Nginx, Apache, Unix, Bash, GitHub</p>
 						<p class='skill-category'>IT:</p>
-						<p class='skill-items'>TCP/IP, DNS, VPN, VLAN, Subnets</p>
-					</div>
-				</section>
-				<section class='soft-skills'>
-					<h2 class='section-title'>Soft Skills</h2>
-					<div class='section-content'>
-						<ul class='soft-skills-list'>
-							<li>Clear and effective communication.</li>
-							<li>Translating business requirements into technical solutions.</li>
-							<li>Organizing and planning software projects.</li>
-							<li>Working in collaborative settings.</li>
-						</ul>
+						<p class='skill-items'>TCP/IP, DNS, VPN, VLAN</p>
 					</div>
 				</section>
 				<section class='education'>
@@ -305,6 +299,7 @@
 					<h2 class='section-title'>Other</h2>
 					<div class='section-content'>
 						<h3 class='title2'>CompTIA Network+ certification</h3>
+						<p class='body-copy2 margin-0'>Expired 2018</p>
 						<br>
 						<h3 class='title2'>Eagle Scout, Boy Scouts of America</h3>
 						<br>
