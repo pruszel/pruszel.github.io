@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- SEO -->
     <title>Peter Ruszel Resume</title>
+    <meta property="og:title" content="Peter Ruszel Resume" />
+    <meta
+      property="og:description"
+      content="Software Developer with over 10 years of full-stack web development experience working on e-commerce and marketing teams at small to large-scale organizations. Passionate about building high-quality responsive and interactive web applications."
+    />
+    <meta property="og:image" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://peterlopez.github.io/resume" />
+
     <!-- assets/resources -->
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
     <style>
@@ -44,14 +53,22 @@
       }
       @media screen {
         body {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
           padding: 4rem;
           max-width: calc(8.5in - 8rem);
+        }
+      }
+      @media screen and (min-width: 1024px) {
+        body {
           zoom: 125%;
         }
       }
       @media print {
         .page {
           margin: 0;
+          width: 6.5in;
           page-break-after: always;
         }
       }
@@ -69,6 +86,9 @@
       }
       .print-btn {
         margin-bottom: 2rem;
+        order: -1;
+        padding: 0.25rem 0.5rem;
+        color: black;
       }
       .name {
         margin: 0;
@@ -193,7 +213,6 @@
   </head>
   <body>
     <div class="page page1">
-      <button class="print-btn" onclick="window.print()">🖨️ Print</button>
       <header>
         <h1 class="name">Peter Lopez Ruszel</h1>
         <p class="summary">
@@ -234,6 +253,10 @@
                     Designed and built integrations between marketing technology
                     plaltforms and clinical platforms.
                   </li>
+                  <li>
+                    Supported rigorous security and legal compliance standards
+                    for CMS application and related AWS infrastrucutre.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -264,7 +287,8 @@
                 <h3 class="title2">Software Engineer - Little Passports</h3>
                 <ul class="responsibilities">
                   <li>
-                    Managed large-scale customer subscription and product data.
+                    Built systems to process and store large-scale customer
+                    subscription and product data.
                   </li>
                   <li>
                     Provided detailed reports and analytics for finance,
@@ -285,7 +309,7 @@
                 </h3>
                 <ul class="responsibilities">
                   <li>
-                    Moved website to new CMS platform incorporating best
+                    Migrated website to new CMS platform incorporating best
                     practices for SEO and mobile-first responsive design.
                   </li>
                   <li>
@@ -392,5 +416,6 @@
         </section>
       </main>
     </div>
+    <button class="print-btn" onclick="window.print()">🖨️ Print</button>
   </body>
 </html>
