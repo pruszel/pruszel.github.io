@@ -42,20 +42,32 @@
       body {
         margin: 0;
       }
-      .page {
-        margin: 1in;
-        width: 6.5in;
-        page-break-after: always;
+      @media screen {
+        body {
+          padding: 4rem;
+        }
+      }
+      @media print {
+        .page {
+          margin: 0;
+          width: 6.5in;
+          page-break-after: always;
+        }
       }
 
       /* Header */
       header {
         display: grid;
         grid-template-columns: auto auto;
+      }
+      .page1 header {
         row-gap: 1rem;
       }
-      header h1 {
+      .page1 header h1 {
         grid-column: span 2;
+      }
+      .print-btn {
+        margin-bottom: 2rem;
       }
       .name {
         margin: 0;
@@ -64,8 +76,14 @@
       .page2 .name {
         margin-bottom: 1rem;
       }
+      @media screen {
+        .page2 header {
+          display: none;
+        }
+      }
       .summary {
         padding-right: 1rem;
+        text-wrap: balance;
       }
       aside {
         text-align: right;
@@ -142,6 +160,10 @@
       .skill-category,
       .skill-items {
         margin: 0;
+        padding: 0;
+      }
+      ul.skill-items {
+        padding-left: 1rem;
       }
       .soft-skills-list {
         padding-left: 0;
@@ -153,13 +175,13 @@
       }
 
       @media print {
+        .print-btn {
+          display: none;
+        }
         a,
         a:visited {
           color: black;
           text-decoration: none;
-        }
-        .page {
-          margin: 0;
         }
         @page {
           size: auto;
@@ -170,13 +192,14 @@
   </head>
   <body>
     <div class="page page1">
+      <button class="print-btn" onclick="window.print()">🖨️ Print</button>
       <header>
         <h1 class="name">Peter Lopez Ruszel</h1>
         <p class="summary">
-          Web Developer with 10+ years of full stack web development experience
-          working on e-commerce and marketing teams at small to large-scale
-          organizations. Passionate about building high-quality responsive and
-          interactive web applications.
+          Software Developer with over 10 years of full-stack web development
+          experience working on e-commerce and marketing teams at small to
+          large-scale organizations. Passionate about building high-quality
+          responsive and interactive web applications.
         </p>
         <aside>
           <div class="contact">
@@ -194,19 +217,18 @@
             <div class="entry">
               <p class="date">Oct 2021 - Present</p>
               <div class="content">
-                <h3 class="title2">Senior Web Developer - One Medical</h3>
+                <h3 class="title2">
+                  Senior Web Developer - One Medical / Amazon
+                </h3>
                 <ul class="responsibilities">
-                  <li>
-                    Managed web development team, project planning, coordinating
-                    with stakeholders.
-                  </li>
+                  <li>Managed and scaled up the Marketing Engineering Team.</li>
                   <li>
                     Built and optimized high-traffic web pages within CMS
                     application based on Figma designs.
                   </li>
                   <li>
-                    Built integrations between marketing technology plaltforms
-                    and clinical data platforms.
+                    Designed and built integrations between marketing technology
+                    plaltforms and clinical platforms.
                   </li>
                 </ul>
               </div>
@@ -277,7 +299,7 @@
                 <ul class="responsibilities">
                   <li>
                     Built and maintained custom Drupal and Wordpress themes,
-                    modules, and plugins for clients' websites.
+                    modules, and plugins for client's website(s).
                   </li>
                 </ul>
               </div>
@@ -289,30 +311,39 @@
     <div class="page page2">
       <header>
         <h1 class="name">Peter Lopez Ruszel</h1>
+        <aside>
+          <p class="page-num">2</p>
+        </aside>
       </header>
-      <aside>
-        <p class="page-num">2</p>
-      </aside>
       <main>
         <section class="tech-skills">
           <h2 class="section-title">Technical Skills</h2>
           <div class="section-content">
-            <p class="skill-category">Front-End:</p>
-            <p class="skill-items">
-              React, Webpack, Gulp, Javascript ES6+, TypeScript, <br />
-              Tailwind, SCSS, Bootstrap, Foundation
-            </p>
-            <p class="skill-category">Back-End:</p>
-            <p class="skill-items">
-              Next.js, Express.js, Jekyll, Django<br />
-              Ruby on Rails, Drupal, WordPress, Magento
-            </p>
+            <p class="skill-category">Frontend:</p>
+            <ul class="skill-items">
+              <li>Languages: Javascript, TypeScript, JSX, HTML, CSS, SCSS</li>
+              <li>Frameworks: React, Tailwind, Bootstrap,</li>
+              <li>Tools: Webpack, Gulp, Babel</li>
+            </ul>
+            <p class="skill-category">Backend:</p>
+            <ul class="skill-items">
+              <li>Languages: Python, Ruby, PHP, JavaScript</li>
+              <li>
+                Frameworks: Django, Ruby on Rails, Drupal, WordPress, Next.js,
+                Express.js
+              </li>
+              <li>Tools: LaunchDarkly, Nginx, Apache</li>
+            </ul>
             <p class="skill-category">Databases:</p>
-            <p class="skill-items">MySQL, PostgreSQL, MongoDB, Redis</p>
+            <p class="skill-items">
+              MySQL, PostgreSQL, MongoDB, Redis, Memcached
+            </p>
             <p class="skill-category">Dev Ops:</p>
-            <p class="skill-items">Docker, Nginx, Apache, Unix, Bash, GitHub</p>
-            <p class="skill-category">IT:</p>
-            <p class="skill-items">TCP/IP, DNS, VPN, VLAN</p>
+            <p class="skill-items">
+              Docker, CircleCI, GitHub, Grafana, Sentry, Rollbar
+            </p>
+            <p class="skill-category">Networking:</p>
+            <p class="skill-items">TCP/IP, Subnetting, DNS, VPN, VLAN</p>
           </div>
         </section>
         <section class="education">
@@ -338,8 +369,16 @@
         <section class="other">
           <h2 class="section-title">Other</h2>
           <div class="section-content">
+            <h3 class="title2">
+              <a
+                href="https://www.credly.com/earner/earned/badge/3012c490-37a2-4f59-a415-b92a71e6569e"
+                >AWS Certified Developer - Associate</a
+              >
+            </h3>
+            <p class="body-copy2">Issued Dec 2023 · Expires Dec 2026</p>
+            <br />
             <h3 class="title2">CompTIA Network+ certification</h3>
-            <p class="body-copy2 margin-0">Expired 2018</p>
+            <p class="body-copy2">Expired 2018</p>
             <br />
             <h3 class="title2">Eagle Scout, Boy Scouts of America</h3>
             <br />
