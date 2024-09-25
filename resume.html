@@ -88,9 +88,6 @@
             display: grid;
             grid-template-columns: auto auto;
         }
-        header h1 {
-            grid-column: span 2;
-        }
         .print-btn {
             margin-bottom: 2rem;
             order: -1;
@@ -105,8 +102,10 @@
             padding-right: 1rem;
             text-wrap: balance;
         }
-        aside {
+        header aside {
+            align-self: end;
             text-align: right;
+            padding-bottom: 0.65rem;
         }
         .contact p {
             margin: 0;
@@ -121,7 +120,7 @@
         
         /* All Sections */
         .section-title {
-            margin: 1rem 0 0rem;
+            margin: 1.5rem 0 0.35rem;
         }
         .title2 {
             margin: 0;
@@ -156,6 +155,9 @@
             margin: 0;
             padding: 0 0 0 1rem;
         }
+        .certifications li {
+            padding-bottom: 0.35rem;
+        }
         .degrees {
             margin: 0;
             padding: 0 0 0 1rem;
@@ -165,17 +167,9 @@
             .print-btn {
                 display: none;
             }
-            a,
-            a:visited {
-                color: black;
-                text-decoration: none;
-            }
             @page {
                 size: auto;
                 margin: 0.75in 1in;
-            }
-            .contact-links {
-                display: none;
             }
         }
     </style>
@@ -184,15 +178,6 @@
     <div class="page page1">
         <header>
             <h1 class="name">Peter Ruszel</h1>
-            <p class="summary">
-                Senior Full-Stack Engineer with over a decade of experience working with
-                e-commerce and marketing teams at small and large-scale organizations.
-                <!--
-                A proven technical leader and teacher committed to leveraging technical
-                knowledge and a strategic mindset to deliver high-impact scalable
-                solutions.
-                -->
-            </p>
             <aside>
                 <div class="contact">
                     <p class="contact-location">San Francisco Bay Area</p>
@@ -209,7 +194,7 @@
                     
                     <div class="entry">
                         <h3 class="title2">
-                            Senior Developer - Amazon One Medical
+                            Senior Full-Stack Engineer – Amazon One Medical
                         </h3>
                         <p class="date">Oct 2021 - Present</p>
                         <ul class="responsibilities">
@@ -217,100 +202,78 @@
                                 Tech lead and mentor for the Marketing Engineering Team.
                             </li>
                             <li>
-                                Delivered platform innovations to improve experience for<br>
-                                marketers using Django-based CMS application.
+                                Designed and implemented integrations between <br>
+                                marketing technology and clinical data platforms <br>using GraphQL and REST APIs.
                             </li>
                             <li>
-                                Designed and implemented key integrations between<br>
-                                marketing technology and clinical data platforms.
+                                Delivered features and fixes for
+                                Django-based CMS <br>used to manage marketing campaigns.
                             </li>
-                            <!--
-                            <li>
-                                Ensured compliance with rigorous security and legal
-                                standards for CMS application and related AWS
-                                infrastructure.
-                            </li>
-                            -->
+                            <li>Built, ran, and analyzed A/B tests for optimizing landing pages.</li>
                         </ul>
                     </div>
                     
                     <div class="entry">
-                        <h3 class="title2">Lead Instructor - The Coder School</h3>
+                        <h3 class="title2">Lead Instructor – The Coder School</h3>
                         <p class="date">Oct 2019 - Oct 2021</p>
                         <ul class="responsibilities">
                             <li>
-                                Crafted personalized curriculum for students across a
-                                diverse range of coding languages, frameworks, and
-                                technologies.
-                            </li>
-                            <!--
-                            <li>
-                                Fostered a fun and engaging learning environment for
-                                students grades K-12.
-                            </li>
-                            -->
-                            <li>
-                                Led trainings and mentored new instructors.
+                                Taught algorithms, data structures, game programming, <br>and web development one-on-one with Python, Java, and JavaScript.
                             </li>
                         </ul>
                     </div>
                     
                     <div class="entry">
-                        <h3 class="title2">Teacher - CodeFu: CS Enrichment Program</h3>
+                        <h3 class="title2">Teacher – CodeFu CS Enrichment Program</h3>
                         <p class="date">Jan 2019 - Dec 2019</p>
                         <ul class="responsibilities">
                             
                             <li>
-                                Fostered a fun and engaging learning environment<br>
-                                for students in grades K-8.
+                                Taught introductory computer science topics, robotics, and web development in classrooms
+                                with students in grades K-8.
                             </li>
-
+                            
                         </ul>
                     </div>
                     
                     <div class="entry">
-                        <h3 class="title2">Software Engineer - Little Passports</h3>
+                        <h3 class="title2">Software Engineer – Little Passports</h3>
                         <p class="date">Jun 2017 - Dec 2018</p>
                         <ul class="responsibilities">
                             <li>
-                                Developed robust systems to process and store large-scale customer
-                                subscription and product data.
+                                Developed systems to process and store customer
+                                subscription and product data using Magento and PHP.
                             </li>
                             <li>
-                                Produced critical reports and analytics for finance,
-                                customer service, and marketing teams to support
-                                strategic business decisions.
-                            </li>
-                            <li>
-                                Increased website traffic and conversion rate
-                                through redesigned Wordpress theme.
+                                Created automated reports and analytics dashboards for finance
+                                and marketing departments.
                             </li>
                         </ul>
                     </div>
                     
                     <div class="entry">
                         <h3 class="title2">
-                            Front End Developer - Cost Plus World Market
+                            Front-End Engineer – Cost Plus World Market
                         </h3>
                         <p class="date">Oct 2016 - May 2017</p>
                         <ul class="responsibilities">
                             <li>
-                                Migrated website to a new CMS platform incorporating best
-                                practices for SEO and mobile-optimized responsive design.
+                                Migrated 1000+ page website to a new e-commerce platform incorporating best
+                                practices for SEO and responsive design.
                             </li>
-                            <li>Built captivating product and marketing webpages.</li>
+                            <li>Built captivating product and marketing webpages using Handlebars.js and Bootstrap.</li>
                         </ul>
                     </div>
                     
                     <div class="entry">
                         <h3 class="title2">
-                            Full-Stack Developer - Clorox, Hathway, AccuAir
+                            Full-Stack Developer – Clorox, Hathway, AccuAir
                         </h3>
                         <p class="date">Aug 2013 - Mar 2016</p>
                         <ul class="responsibilities">
                             <li>
                                 Developed and maintained custom Drupal and Wordpress themes,
-                                modules, and plugins for client's websites.
+                                modules, and plugins for e-commerce and marketing websites.
                             </li>
                         </ul>
                     </div>
@@ -327,14 +290,8 @@
                 <br>
                 
                 <h4>Diablo Valley College</h4>
-                <ul class="degrees">
-                    <li>
-                        <p>AS, Computer Science</p>
-                    </li>
-                    <li>
-                        <p>AA, Philosophy</p>
-                    </li>
-                </ul>
+                <p>AS, Computer Science</p>
+                <p>AA, Philosophy</p>
                 
                 <h2 class="section-title">Certifications</h2>
                 <ul class="certifications">
@@ -343,7 +300,7 @@
                             AWS Certified Developer
                         </a>
                         <br>
-                        <span style="font-size: 0.85rem;">Issued Dec 2023</span>
+                        <span style="font-size: 0.85rem;">Issued 2023</span>
                     </li>
                     <li>
                         CompTIA Network+<br>
@@ -356,9 +313,22 @@
                 </ul>
                 
                 <h2 class="section-title">Technical Skills</h2>
+                <p>Frontend Development:</p>
                 <ul class="tech-skills">
-                    <li>JavaScript, React, HTML, CSS, SQL</li>
-                    <li>Python, Django, PHP, WordPress, Ruby on Rails</li>
+                    <li>TypeScript, JavaScript</li>
+                    <li>React, Angular</li>
+                    <li>HTML, CSS</li>
+                </ul>
+                <br>
+                <p>Backend Development:</p>
+                <ul class="tech-skills">
+                    <li>Python, Django</li>
+                    <li>Node.js, Next.js</li>
+                    <li>PHP, WordPress</li>
+                </ul>
+                <br>
+                <p>DevOps:</p>
+                <ul class="tech-skills">
                     <li>AWS, Terraform, Docker</li>
                 </ul>
                 
